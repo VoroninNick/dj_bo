@@ -1,0 +1,347 @@
+.main_banner
+  position: relative
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  .row
+    height: 100%
+  .columns
+    height: 100%
+  .background_line
+    position: absolute
+    top: 50%
+    left: 0
+
+  .background_man
+    position: absolute
+    width: 100%
+    height: 90%
+    left: 0
+    bottom: -50px
+    background-size: contain
+    background-repeat: no-repeat
+  .banner_text-container
+    margin-top: 20%
+    height: 100% 
+    .title
+      color: black
+      font-size: 15px
+      font-weight: bold
+      padding-bottom: 15px
+    .banner_header
+      position: relative
+      padding-left: 225px
+      padding-top: 40px
+      text-transform: uppercase
+      line-height: 1
+      font-weight: bold
+      span
+        position: absolute
+        top: 20px
+        left: -12px
+        color: black
+        font-size: 183px
+      color: $red-color
+      text-transform: underline
+      font-size: 46px
+    .navigations_box
+      text-transform: uppercase
+      font-size: 28px
+      display: block
+      text-decoration: none
+      color: $grey-800
+      padding-top: 20px
+      position: relative
+      top: 65px
+      line-height: 0.8
+      a
+        text-decoration: none
+      span.vertical_line
+        padding: 3px
+    .questions_box
+      text-transform: uppercase
+      font-size: 16px
+      color: black
+      opacity: 0.5
+      margin-top: 110px
+      text-decoration: none
+      display: inline-block
+      &:hover
+        opacity: 1
+    .vertical_line
+      color: $red-color
+      padding: 5px
+
+.baner_sale
+  position: fixed
+  bottom: 0
+  left: 51% 
+  background-color: black
+  color: white
+  padding: 10px
+  width: 400px
+  z-index: 2
+
+  .title
+    font-size: 18px
+    padding: 0px 0 0 20px
+  .sub_title
+    font-style: 14px
+    opacity: 0.5
+    padding: 0px 0 0 20px
+  .percents
+    position: absolute
+    top: 10px
+    right: 10px
+    font-size: 32px
+.video_box
+  padding-top: 10px
+  height: 500px
+  iframe
+    width: 100%
+    height: 100%
+    .title
+      font-size: 18px
+      color: black
+      opacity: 0.5
+    .sub_title
+      font-size: 38px
+.background_about_project
+  overflow: hidden
+  position: relative
+  padding-bottom: 100px
+  // +breakpoint(large up)
+  //   height: 100vh
+  img
+    position: absolute
+    top: 0
+    left: 0
+  .square-content
+    position: relative
+    float: left
+    width: 25%
+    height: 400px
+    border-left: solid 1px $silver-color
+    border-top: solid 1px $silver-color
+    border-right: solid 1px $silver-color
+    margin: -0.5px
+    padding: 7% 0 5% 30px
+    // &:hover
+      // background-color: $grey-600
+    .title
+      font-size: 12px
+      color: $grey-600
+      margin-bottom: 15px
+      font-weight: 500
+    a
+      color: $red-color
+      text-transform: uppercase
+      font-size: 24px
+      text-decoration: none
+      position: relative
+      margin-top: 70px
+      font-weight: bold
+      display: inline-block
+      svg
+        *
+          fill: $red-color
+        border: solid 1px $red-color
+        border-radius: 50%
+        padding: 3px
+        position: relative
+        top: 5px
+    .sub_title
+      font-size: 30px
+      font-weight: bold 
+      line-height: 0.9
+      margin-bottom: 10px 
+    .line
+      background-color: $red-color
+      margin-bottom: 20px
+    .figures 
+      font-size: 80px
+      line-height: 67px
+      font-weight: bold
+    .under_figures_tex
+      font-size: 20px
+      font-weight: bold
+      text-transform: uppercase
+    .text_figures
+      font-size: 14px 
+      opacity: 0.7
+      padding-top: 30px
+.list_box
+  padding-left: 120px
+  padding-bottom: 100px
+  .sub_title
+    font-size: 18px
+    text-transform: uppercase
+    padding-bottom: 10px
+    font-weight: bold
+  .title  
+    font-size: 48px
+    color: $red-color
+    padding: 20px 0 40px 0
+    font-weight: bold
+  .list_conteiner
+    position: relative
+    .circle_number
+      position: absolute
+      top: 20px
+      left: 0
+      height: 35px
+      width: 35px
+      border: 1px solid black
+      border-radius: 50%
+      text-align: center
+      span
+        color: $red-color
+        display: inline-block
+        transform: translate(0%,30%)
+        font-weight: bold
+    .title_list
+      font-size: 24px
+      padding: 20px 0 10px 55px
+      font-weight: bold
+      opacity: 0.9
+    .list_text
+      font-size: 18px
+      padding-left: 55px
+      opacity: 0.7
+.about_dj_container
+  position: relative
+  overflow: hidden
+  .img_man
+    max-width: 42%
+    position: absolute
+    bottom: -11px
+    right: -12%
+      // +breakpoint('medium')
+        max-width: 75%
+.main_box
+  position: relative
+  background-color: $silver-color
+  height: 90px
+  .main_title
+    padding-bottom: 10px
+    text-transform: uppercase
+    font-weight: bold
+    position: absolute
+    top: 50px
+    left: 115px
+  .line
+    position: absolute
+    top: 90px
+    left: 115px
+.bgc_product_box
+  background-color: #EDEDED
+  padding: 100px 0 0
+  .block_container
+    position: relative
+    padding-bottom: 30px
+    &:after
+      background-color: red
+      content: ""
+      position: absolute
+      width: 100%
+      height: 2px
+      left: 0
+      bottom: 0
+  .product_info_box 
+    position: relative
+    .title
+      color: $red-color
+      padding: 0px 20px 20px 50px
+      font-size: 28px
+      span.figures_products
+        position: absolute
+        top: 0px
+        left: 20px
+    .text_box
+      opacity: 0.8
+      padding-left: 50px
+  .product_buy_box
+    position: relative
+    top: 0
+    left: 0
+    background-color: white
+    height: 370px
+    margin-bottom: 80px
+    padding-bottom: 100px
+    img
+      width: 100%
+    .title
+      padding: 20px 0 30px 20px
+    .text_box
+      opacity: 0.8
+      padding-left: 20px
+.portfolio_box
+  text-align: center
+  .title
+    padding-top: 50px
+    font-weight: bold
+  .line
+    position: relative
+    top: 10px
+    left: 47%
+  .sub_title
+    color: $red-color
+    font-size: 40px
+    padding-top: 50px
+    font-weight: bold
+  .Collage
+    padding: 15px
+    .img-block
+      position: relative
+      .hover-block
+        position: absolute
+        top: 0
+        left: 0
+        display: flex
+        background-color: rgba($red-color, 0.7)
+        opacity: 0
+        width: 100%
+        height: 100%
+        svg
+          fill: white
+          width: 50px
+          height: 50px
+          margin: auto
+      &:hover
+        .hover-block
+          opacity: 1
+          transition: 0.5s
+.contacts_bgc
+  position: relative
+  overflow: hidden
+  img
+    position: absolute
+  .contacts_box
+    position: relative
+    padding: 100px 0 200px 0
+    .form_elements_box
+      .title
+        font-weight: bold
+        padding-bottom: 20px
+      .sub_title
+        color: $red-color
+        font-size: 34px
+        font-weight: bold
+        padding: 20px 0
+        text-transform: uppercase
+      .sam_text
+        opacity: 0.8
+      .forms
+        padding: 30px 0
+        .input
+          input
+            width: 100%
+            padding: 15px
+            outline: none !important
+      .button_contact
+        padding-top: 50px
+     
+      
+      
+
+

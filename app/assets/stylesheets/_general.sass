@@ -1,0 +1,69 @@
+@import "mixins"
+
+*
+  box-sizing: border-box
+  font-family: Roboto
+  margin: 0
+  padding: 0
+
+.line
+  width: 60px
+  height: 10px
+  background-color: black
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.2)
+.title
+  text-transform: uppercase
+.product-button-wrap
+  width: 100%
+  height: 30px
+  position: absolute
+  bottom: -15px
+.button-product
+  +my_horizontal_align
+    // position: absolute
+  background-color: $grey-800
+  height: 30px
+  padding: 0 15px
+  border-radius: 20px
+  // border: solid 1px black
+  cursor: pointer
+  transition: 0.25s
+  // margin: 0 auto
+  display: inline-block
+  .button-text
+    text-align: center
+    color: white
+    line-height: 30px
+    display: inline-block
+    float: left
+    &.dynamic-text      
+      width: 0px
+      overflow: hidden
+      transition: 0.25s
+  &:hover 
+    background-color: $red-color
+    .button-text
+      &.dynamic-text
+        width: 78px
+        padding-left: 10px
+
+
+.thin_line
+  color: $silver-color
+  height: 2px
+  width: 50px
+.button_contact
+  button
+    height: 45px
+    width: 25%
+    background-color: $red-color
+    border-radius: 20px
+    border: solid 1px $red-color
+    cursor: pointer
+    color: white
+    font-weight: 16px
+    // transform: translate(25%,65%)
+    text-align: center
+    color: white
+    text-transform: uppercase
+    font-weight: bold
