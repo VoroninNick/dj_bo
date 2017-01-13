@@ -47,25 +47,25 @@
       | DJ Bo
       br
       | Internetment
-  .square-content
+  .square-content.square_padding_box
     .line
     p.figures 8
     p.under_figures_tex 4 профи
     p.text_figures 
       | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
-  .square-content
+  .square-content.square_padding_box
     .line
     p.figures 1000
     p.under_figures_tex 1000 человек
     p.text_figures 
       | В среднем танцует под нашу музыку в неделю и эта цифра постоянно растет
-  .square-content
+  .square-content.square_padding_box
     .line
     p.figures 5000
     p.under_figures_tex 15000 родителей
     p.text_figures 
       | Довольных родителей после проведенного нами музыкального сопровождения на свадьбе 
-  .square-content.small_none
+  / .square-content.small_none
   
   .square-content
     .line
@@ -79,19 +79,24 @@
     p.under_figures_tex  1600 залов
     p.text_figures 
       | В которых мы дарили праздник и веселье нашим дорогим клиентам 
-  .square-content.hover_box
+  .square-content.square-forms
     .line
-    p.sub_title 
-      |устроим
-      br
-      |праздник?
-    p.title
-    a href="/" 
-      = inline_svg "telephone.svg"
-      span
-        |позвонить 
-      span.skype_none
-        |в skype?
+    p.sub_title обсудить ваш праздник
+    .forms-square
+      form
+        .input-square
+          input#first_name-square name="firstname" placeholder="Ваше имя"
+          / .input-square.none
+          input#phone-square name="tel" placeholder="телефон"
+        .input-square.submit-square.button_contact
+          button связатся
+    / p.title
+    / a href="/" 
+    /   = inline_svg "telephone.svg"
+    /   span
+    /     |позвонить 
+    /   span.skype_none
+    /     |в skype?
 .about_dj_container
   img.img_man src="/assets/DJ.png"
   .row
