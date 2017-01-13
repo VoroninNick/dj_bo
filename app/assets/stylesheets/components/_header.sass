@@ -2,6 +2,50 @@
   position: absolute
   width: 100%
   .menu
+    .home_link
+      border-left: solid 2px $silver-color
+      opacity: 0.8
+      display: inline-block
+      svg
+        fill: $red-color
+        width: 65px
+        height: 40px
+        position: relative
+        top: 10px
+        +breakpoint(small only)
+          height: 40px
+          padding-top: none
+          top: 14px
+    .menu-button 
+      float: right 
+      cursor: pointer 
+      position: relative 
+      z-index: 1 
+      width: 50px 
+      height: 40px 
+      padding: 12px 
+      margin: 15px 10px 0 -10px
+      display: none
+      +breakpoint(medium only)
+        display: block   
+      +breakpoint(small only)
+        display: block  
+      .menu-button-lines 
+        +burger(25px, 3px, 3px, $red-color, 1px) 
+        position: absolute 
+      &:hover 
+        .menu-button-lines 
+          &, &::before, &::after 
+        // background-color: #fff 
+          &:before 
+      &.opened 
+        .menu-button-lines 
+          +burger-to-cross 
+          &::before, &::after 
+            background-color: $red-color  
+        &:hover 
+          .menu-button-lines 
+            &::before, &::after
     .header_link
       padding: 25px 12px 0px
       font-size: 16px
@@ -10,6 +54,10 @@
       color: black
       border-left: solid 2px $silver-color
       opacity: 0.8
+      +breakpoint(medium only)
+        display: none
+      +breakpoint(small only)
+        display: none
   .number
     float: right
     color: black

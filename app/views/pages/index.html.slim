@@ -22,6 +22,17 @@
         a.questions_box href="/" для чего нужен dj?
         span.vertical_line |
         a.questions_box href="/" что я предлогаю?
+      .baner_text-conteiner-mobile
+        p.banner_header_mobile
+          span DJ
+          | на ваше
+          br
+          | торжественное
+          br
+          | мероприятие
+        a.navigations_box_mobile href="/" Молодоженам 
+        a.navigations_box_mobile href="/" компаниям 
+        a.navigations_box_mobile href="/" имениникам 
       .baner_sale
         p.title акции и скидки
         p.sub_title для молодоженов и именинников
@@ -30,7 +41,7 @@
   iframe frameborder="0" src="https://www.youtube.com/embed/XGSy3_Czz8k"
 .background_about_project
   img src="assets/tone-bg-1.jpg"
-  .square-content
+  .square-content.smal_full_width
     p.title про проект
     p.sub_title 
       | DJ Bo
@@ -39,43 +50,48 @@
   .square-content
     .line
     p.figures 8
-    p.under_figures_tex профи
+    p.under_figures_tex 4 профи
     p.text_figures 
       | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
   .square-content
     .line
     p.figures 1000
-    p.under_figures_tex человек
+    p.under_figures_tex 1000 человек
     p.text_figures 
       | В среднем танцует под нашу музыку в неделю и эта цифра постоянно растет
   .square-content
     .line
     p.figures 5000
-    p.under_figures_tex родителей
+    p.under_figures_tex 15000 родителей
     p.text_figures 
       | Довольных родителей после проведенного нами музыкального сопровождения на свадьбе 
-  .square-content
+  .square-content.small_none
   
   .square-content
     .line
     p.figures 1500
-    p.under_figures_tex руководителей
+    p.under_figures_tex 1500 руководителей
     p.text_figures 
       | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
   .square-content
     .line
     p.figures 1650
-    p.under_figures_tex залов
+    p.under_figures_tex  1600 залов
     p.text_figures 
       | В которых мы дарили праздник и веселье нашим дорогим клиентам 
-  .square-content
+  .square-content.hover_box
     .line
-    p.sub_title устроим праздник?
+    p.sub_title 
+      |устроим
+      br
+      |праздник?
     p.title
     a href="/" 
       = inline_svg "telephone.svg"
       span
-        |позвонить в skype?
+        |позвонить 
+      span.skype_none
+        |в skype?
 .about_dj_container
   img.img_man src="/assets/DJ.png"
   .row
@@ -112,220 +128,50 @@
           p.title_list Большой опыт
           p.list_text
             |Я выступал для публики начиная от 5 человек и до 10 000    
-.main_box  
-  .row
+.bgc_product_box_block
+  .grey-bg-img style="background-image: url(#{asset_path('tone_bg_greey.jpg')})"
+  .row.block-grid
     .columns
-      .main_title группы товаров
-      .line
-.bgc_product_box
-  .row
-    .columns.large-3
-      .product_info_box
+      .product_box.top
+        .bg-img style="background-image: url(#{asset_path('djj.jpg')})"
+        .title dj
+        .product_text Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
+        a.product_link href="/" 
+          = inline_svg "plus.svg"
+          span
+            |показать все
+  .row.block-grid
+    .columns.large-6
+      .product_box.left
+        .bg-img style="background-image: url(#{asset_path('saksofon.jpg')})"
+        .title dj + саксофонист и певица
+        .product_text Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
+        a.product_link href="/" 
+          = inline_svg "plus.svg"
+          span
+            |показать все
+    .columns.large-6
+      .product_box.right
+        .bg-img style="background-image: url(#{asset_path('lampa.jpg')})"
         .title 
-          |dj
-          span.figures_products
-            |1.
-        .text_box 
-          | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности  
-    .columns.large-9.block_container
-      .row
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title dj bo
-            .text_box
-              |Короткий опис даного товару який розказує про всі його унікальні характеристики та цікаві фішки.
-            .product-button-wrap
-              a.button-product 
-                p.button-text.fixed-text       
-                  |320$  
-                p.button-text.dynamic-text 
-                  |заказать
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title команда професиональных dj
-            .text_box
-              |Короткий опис даного товару який розказує про всі його унікальні характеристики та цікаві фішки.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          p
-.bgc_product_box
-  .row
-    .columns.large-3
-      .product_info_box
-        .title
-          |Dj + саксофонист и певица
-          span.figures_products
-            |2.
-        .text_box 
-          | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности  
-    .columns.large-9.block_container
-      .row
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title DJ + саксофонист Подсветка боковых колон 
-            .text_box
-              |Короткий опис даного товару який розказує про всі його унікальні характеристики та цікаві фішки.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |540$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          p
-.bgc_product_box
-  .row
-    .columns.large-3
-      .product_info_box
-        .title 
-          |Декор и подсветка зала
-          span.figures_products
-            |3. 
-        .text_box 
-          | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
-    .columns.large-9.block_container
-      .row
-        .columns.large-4  
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title Подсветка боковых колон   
-            .text_box
-              |Короткий опис даного товару який розказує про всі його унікальні характеристики та цікаві фішки.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-.bgc_product_box
-  .row
-    .columns.large-3
-      .product_info_box
-        .title
-          |Ефекты на первый танец
-          span.figures_products
-            |4.
-        .text_box 
-          | Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности
-    .columns.large-9
-      .row
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title Подсветка боковых колон   
-            .text_box
-              |Короткий опис даного товару який розказує про всі його унікальні характеристики та цікаві фішки.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/dj_bo.jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/gallery/banner(1).jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-      .row
-        .columns.large-4
-          .product_buy_box
-            img src="/assets/gallery/banner(10).jpg"
-            .title Подсветка боковых колон   
-            .text_box
-              |Короткий опис даного товару який розказує про всі його унікальні характеристики та цікаві фішки.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4  
-          .product_buy_box
-            img src="/assets/gallery/banner(12).jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
-        .columns.large-4  
-          .product_buy_box
-            img src="/assets/gallery/banner(11).jpg"
-            .title DJ + певица  
-            .text_box
-              |Команда профессионалов в области музыкального сопровождения на мероприятиях любой  сложности.
-            .product-button-wrap  
-              .button-product
-                p.button-text.fixed-text       
-                  |450$  
-                p.button-text.dynamic-text 
-                  |заказать 
+          | декор и подсветка
+          br
+          | зала
+        .product_text Команда профессионалов в области
+        a.product_link href="/" 
+          = inline_svg "plus.svg"
+          span
+            |показать все
+      .product_box.right_bottom
+        .bg-img style="background-image: url(#{asset_path('dum.png')})"
+        .title ефекты на первый танец
+        .product_text Команда профессионалов в области
+        a.product_link href="/" 
+          = inline_svg "plus.svg"
+          span
+            |показать все
+
+
 .row
   .columns.portfolio_box
     .title портфолио
@@ -378,14 +224,13 @@
           .forms
             form
               .row 
-                .medium-6.columns
+                .columns
                   .input 
                     input#first_name name="firstname" placeholder="Ваше имя"
-                .medium-6.columns
                   .input 
                     input#phone name="tel" placeholder="телефон"
               .row 
-                .columns 
+                .columns.medium-centered 
                   .input.submit.button_contact
                     button связатся
         

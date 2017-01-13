@@ -17,3 +17,4 @@
 //= require collage
 //= require lightgallery.min
 // require lightgallery
+//= require menu

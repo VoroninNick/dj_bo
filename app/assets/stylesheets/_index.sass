@@ -1,3 +1,46 @@
+body
+  .baner_burger_menu
+    background-color: $grey-800
+    position: fixed
+    top: 0
+    right: 0
+    width: auto
+    transform: translate(100%, 0%)
+    transition: 1s
+    z-index: 1001
+    +breakpoint(medium only)
+      width: 100%
+    +breakpoint(small only)
+      width: 100%
+
+    .close-m-menu
+      position: absolute
+      top: 5px
+      right: 2px
+      width: 36px
+      height: 36px
+      cursor: pointer
+      svg 
+        fill: $red-color
+        padding: 7px
+    .baner_link
+      padding: 15px 40px
+      list-style: none
+      a 
+        color: $silver-color
+        text-decoration: none
+  &.opened
+    overflow: hidden
+    .bg_cover
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(0,0,0,0.7)
+      z-index: 1000
+    .baner_burger_menu
+      transform: translate(0,0)
 .main_banner
   position: relative
   height: 100vh
@@ -10,7 +53,9 @@
   .background_line
     position: absolute
     top: 50%
-    left: 0
+    right: -9%
+    +breakpoint(small only)
+      display: none
 
   .background_man
     position: absolute
@@ -20,30 +65,50 @@
     bottom: -50px
     background-size: contain
     background-repeat: no-repeat
+    +breakpoint(medium only)
+      height: 85%
+      left: -90px
+      bottom: 0
   .banner_text-container
     margin-top: 20%
-    height: 100% 
+    height: 100%
+    +breakpoint(small only)
+      display: none 
     .title
       color: black
       font-size: 15px
       font-weight: bold
-      padding-bottom: 15px
+      // padding-bottom: 15px
+      position: relative
+      top: 40px
+    .line
+      position: relative
+      top: 50px
     .banner_header
       position: relative
       padding-left: 225px
-      padding-top: 40px
+      padding-top: 70px
       text-transform: uppercase
       line-height: 1
       font-weight: bold
+      color: $red-color
+      +breakpoint(medium omly)
+        font-size: 34px
+        padding-left: 160px
+        line-height: 1.1
+
       span
         position: absolute
-        top: 20px
-        left: -12px
+        top: 45px
+        left: -8px
         color: black
         font-size: 183px
-      color: $red-color
-      text-transform: underline
-      font-size: 46px
+        +breakpoint(medium omly)
+          font-size: 135px
+    
+      // color: $red-color
+      // text-transform: underline
+      // font-size: 46px
     .navigations_box
       text-transform: uppercase
       font-size: 28px
@@ -52,48 +117,96 @@
       color: $grey-800
       padding-top: 20px
       position: relative
-      top: 65px
+      top: 40px
       line-height: 0.8
       a
         text-decoration: none
       span.vertical_line
         padding: 3px
+      +breakpoint(medium only)
+        top: 80px
     .questions_box
       text-transform: uppercase
-      font-size: 16px
+      font-size: 14px
       color: black
       opacity: 0.5
-      margin-top: 110px
+      margin-top: 80px
       text-decoration: none
       display: inline-block
       &:hover
         opacity: 1
+      +breakpoint(medium only)
+        margin-top: 110px
     .vertical_line
       color: $red-color
-      padding: 5px
-
-.baner_sale
-  position: fixed
-  bottom: 0
-  left: 51% 
-  background-color: black
-  color: white
-  padding: 10px
-  width: 400px
-  z-index: 2
-
-  .title
-    font-size: 18px
-    padding: 0px 0 0 20px
-  .sub_title
-    font-style: 14px
-    opacity: 0.5
-    padding: 0px 0 0 20px
-  .percents
-    position: absolute
-    top: 10px
-    right: 10px
-    font-size: 32px
+      padding: 10px
+  .baner_text-conteiner-mobile
+    position: relative
+    bottom: -62%
+    left: 0
+    box-shadow: 0px -4px 1px rgba(0,0,0,0.2)
+    background-color: white
+    height: 190px
+    display: none
+    +breakpoint(small only)
+      display: block
+    .banner_header_mobile
+      position: relative
+      padding-left: 100px
+      padding-top: 20px
+      text-transform: uppercase
+      line-height: 1.2
+      font-weight: bold
+      color: $red-color
+      span
+        position: absolute
+        top: 2px
+        left: 15px
+        color: black
+        font-size: 70px
+    .navigations_box_mobile
+      text-transform: uppercase
+      font-size: 14px
+      display: block
+      text-decoration: none
+      color: $grey-800
+      position: relative
+      bottom: -15px
+      left: 17px
+      line-height: 1.5
+      padding-top: none
+      a
+        text-decoration: none
+  .baner_sale
+    position: fixed
+    bottom: 0
+    left: 51% 
+    background-color: black
+    color: white
+    padding: 10px
+    width: 400px
+    z-index: 2
+    .title
+      font-size: 18px
+      padding: 0px 0 0 20px
+    .sub_title
+      font-style: 14px
+      opacity: 0.5
+      padding: 0px 0 0 20px
+    .percents
+      position: absolute
+      top: 10px
+      right: 10px
+      font-size: 32px
+    +breakpoint(medium only)
+      left: 30%
+    +breakpoint(small only)
+      left: 0
+      .sub_title
+        display: none
+      .percents
+        top: 0
+        right: 90px
 .video_box
   padding-top: 10px
   height: 500px
@@ -126,8 +239,17 @@
     border-right: solid 1px $silver-color
     margin: -0.5px
     padding: 7% 0 5% 30px
+    +breakpoint(small only)
+      width: 50%
     // &:hover
       // background-color: $grey-600
+    &.smal_full_width
+      +breakpoint(small only)
+        width: 100%
+        height: auto
+    &.small_none
+      +breakpoint(small only)
+        display: none
     .title
       font-size: 12px
       color: $grey-600
@@ -139,9 +261,12 @@
       font-size: 24px
       text-decoration: none
       position: relative
-      margin-top: 70px
+      margin-top: 45px
       font-weight: bold
       display: inline-block
+      +breakpoint(small only)
+        font-size: 18px
+        margin-top: 50px
       svg
         *
           fill: $red-color
@@ -150,11 +275,22 @@
         padding: 3px
         position: relative
         top: 5px
+        +breakpoint(small only)
+          top: 10px
+          left: -10px
+      span.skype_none
+        +breakpoint(small only)
+          display: none
     .sub_title
-      font-size: 30px
+      font-size: 24px
       font-weight: bold 
       line-height: 0.9
       margin-bottom: 10px 
+      color: $grey-800
+      +breakpoint(medium only)
+        font-size: 21px
+      +breakpoint(small only)
+        font-size: 24px
     .line
       background-color: $red-color
       margin-bottom: 20px
@@ -162,27 +298,59 @@
       font-size: 80px
       line-height: 67px
       font-weight: bold
+      color: $grey-800
+      display: none
+      +breakpoint(medium only)
+        font-size: 40px
+      +breakpoint(small only)
+        font-size: 48px
     .under_figures_tex
-      font-size: 20px
+      font-size: 24px
       font-weight: bold
       text-transform: uppercase
+      color: $grey-800
+      +breakpoint(medium only)
+        font-size: 18px
+      +breakpoint(small only)
+        font-size: 13px
     .text_figures
       font-size: 14px 
       opacity: 0.7
       padding-top: 30px
+      +breakpoint(small only)
+        font-size: 12px
+  .hover_box
+    &:hover
+    background-color: rgba($grey-600, 0.1)
+.about_dj_container
+  .columns
+    +breakpoint(small only)
+      width: 100%
+    +breakpoint(medium only)
+      width: 100%  
 .list_box
   padding-left: 120px
   padding-bottom: 100px
+  +breakpoint(small only)
+    width: 100%
+    padding-left: 0px
+  +breakpoint(medium only)
+    width: 100%
+    padding-left: 0px
   .sub_title
     font-size: 18px
     text-transform: uppercase
     padding-bottom: 10px
     font-weight: bold
+    +breakpoint(small only)
+      font-size: 16px
   .title  
     font-size: 48px
     color: $red-color
     padding: 20px 0 40px 0
     font-weight: bold
+    +breakpoint(small only)
+      font-size: 31px
   .list_conteiner
     position: relative
     .circle_number
@@ -204,10 +372,14 @@
       padding: 20px 0 10px 55px
       font-weight: bold
       opacity: 0.9
+      +breakpoint(small only)
+        font-size: 22px
     .list_text
       font-size: 18px
       padding-left: 55px
       opacity: 0.7
+      +breakpoint(small only)
+        font-size: 16px
 .about_dj_container
   position: relative
   overflow: hidden
@@ -216,74 +388,158 @@
     position: absolute
     bottom: -11px
     right: -12%
-      // +breakpoint('medium')
-        max-width: 75%
-.main_box
-  position: relative
-  background-color: $silver-color
-  height: 90px
-  .main_title
-    padding-bottom: 10px
-    text-transform: uppercase
-    font-weight: bold
+    display: none
+    +breakpoint(large up)
+      display: block
+.bgc_product_box_block
+  position: relative 
+  overflow: hidden
+  .grey-bg-img
     position: absolute
-    top: 50px
-    left: 115px
-  .line
-    position: absolute
-    top: 90px
-    left: 115px
-.bgc_product_box
-  background-color: #EDEDED
-  padding: 100px 0 0
-  .block_container
+    top: 10%
+    height: 80%
+    width: 100%
+    background-size: cover
+    background-position: center
+  .block-grid
     position: relative
-    padding-bottom: 30px
-    &:after
-      background-color: red
-      content: ""
-      position: absolute
-      width: 100%
-      height: 2px
-      left: 0
-      bottom: 0
-  .product_info_box 
+  
+  .product_box
     position: relative
+    background-color: white
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2)
+    width: 100%
+    overflow: hidden
+    padding: 30px
+    margin-bottom: 30px
     .title
       color: $red-color
-      padding: 0px 20px 20px 50px
-      font-size: 28px
-      span.figures_products
-        position: absolute
-        top: 0px
-        left: 20px
-    .text_box
-      opacity: 0.8
-      padding-left: 50px
-  .product_buy_box
+      font-size: 36px
+      font-weight: bold
+      text-transform: uppercase
+      +breakpoint(small only)
+        font-size: 24px
+    .product_text
+      font-size: 16px
+      opacity: 0.9
+      width: 50% 
+    .bg-img
+      position: absolute
+      // width: 50%
+      // height: 100%
+      // right: -10%
+      // top: 0
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+    .product_text
+      width: 500px
+      margin-top: 10px
+    &.top
+      height: 350px
+      .bg-img
+        width: 50%
+        height: 100%
+        right: -10%
+        top: 0
+        +breakpoint(small only)
+          width: 56%
+          height: 58%
+          right: -13%
+      .product_text
+        +breakpoint(small only)
+          width: 200px
+    &.left
+      height: 630px
+      .bg-img
+        width: 50%
+        top: 15%
+        height: 100%
+        right: 0
+        +breakpoint(small only)
+          width: 70%
+          right: -117px
+      .title
+        position: relative
+      .product_text
+        width: 300px
+        +breakpoint(small only)
+          width: 180px
+      +breakpoint(medium only)
+        background-size: contain
+    &.right
+      height: 300px
+      .bg-img
+        width: 40%
+        height: 100%
+        right: -5px
+        top: 0
+        +breakpoint(small only)
+          width: 66%
+          height: 82%
+          right: -41px
+      .title
+        width: 400px
+        position: relative
+        +breakpoint(small only)
+          width: 150px
+      .product_text
+        +breakpoint(small only)
+          width: 100px
+    &.right_bottom
+      .right
+      height: 300px
+      .bg-img
+        width: 30%
+        height: 100%
+        right: 0
+        top: 0
+        +breakpoint(small only)
+          width: 58%
+          right: 7px
+      .title
+        width: 300px
+      .product_text
+        +breakpoint(small only)
+          width: 100px
+
+
+
+
+    
+  .product_left_box
     position: relative
-    top: 0
-    left: 0
     background-color: white
-    height: 370px
-    margin-bottom: 80px
-    padding-bottom: 100px
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2)
+    width: 100%
+    height: 700px
+    overflow: hidden
+    padding: 30px
+    margin: 20px 0
+  .product_right_box
+    position: absolute
+    top: 35%
+    background-color: white
+    box-shadow: 3px 5px 5px rgba(0,0,0,0.2)
+    width: 45%
+    height: 25%
     img
-      width: 100%
+      position: absolute
+      top: 35%
+      right: 0
+      width: 50%
+      height: 60%
     .title
-      padding: 20px 0 30px 20px
-    .text_box
-      opacity: 0.8
-      padding-left: 20px
+
+
+
 .portfolio_box
   text-align: center
   .title
-    padding-top: 50px
+    padding: 50px 0 20px
     font-weight: bold
   .line
-    position: relative
-    top: 10px
-    left: 47%
+    margin: 0 auto
   .sub_title
     color: $red-color
     font-size: 40px
@@ -323,17 +579,26 @@
       .title
         font-weight: bold
         padding-bottom: 20px
+        text-align: center
+      .line
+        margin: 0 auto
       .sub_title
         color: $red-color
         font-size: 34px
         font-weight: bold
         padding: 20px 0
         text-transform: uppercase
+        text-align: center
+        +breakpoint(small only)
+          font-size: 28px
       .sam_text
         opacity: 0.8
+        text-align: center
       .forms
         padding: 30px 0
         .input
+          padding-bottom: 20px
+          text-align: center
           input
             width: 100%
             padding: 15px
