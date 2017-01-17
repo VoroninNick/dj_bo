@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require plugins/responsify
 //= require jquery.collagePlus.min
 //= require collage
-//= require lightgallery.min
-// require lightgallery
+//= require lightgallery/dist/js/lightgallery.min
 //= require menu
+//= require home
