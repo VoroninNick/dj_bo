@@ -13,9 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require youTubeEmbed-jquery-1.0
 //= require plugins/responsify
 //= require jquery.collagePlus.min
 //= require collage
 //= require lightgallery/dist/js/lightgallery.min
 //= require menu
 //= require home
+//= require video

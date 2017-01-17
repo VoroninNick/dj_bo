@@ -37,8 +37,9 @@
         p.title акции и скидки
         p.sub_title для молодоженов и именинников
         p.percents -40%
-.video_box 
-  iframe frameborder="0" src="https://www.youtube.com/embed/XGSy3_Czz8k"
+.video_box
+  = render :partial => "partials/video_block" 
+  / iframe frameborder="0" src="https://www.youtube.com/embed/XGSy3_Czz8k"
 .background_about_project
   img src="assets/tone-bg-1.jpg"
   .square-content.smal_full_width
