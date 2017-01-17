@@ -57,6 +57,10 @@
       border-left: solid 2px $silver-color
       opacity: 0.8
       cursor: pointer
+      &:hover
+        color: $red-color
+      +breakpoint(xxlarge only)
+        font-size: 18px
       +breakpoint(medium only)
         display: none
       +breakpoint(small only)
