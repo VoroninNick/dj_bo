@@ -3,3 +3,5 @@ asset "foundation-sites"
 asset "sass-css3-mixins"
 
 asset "sass-burger"
+
+asset "lightgallery"
